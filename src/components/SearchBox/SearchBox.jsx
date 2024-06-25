@@ -22,7 +22,7 @@ export default function SearchBox({ value, onSearch }) {
           type="text"
           value={value}
           onChange={(evt) => {
-            onSearch(evt.target.value);
+            onSearch(evt.target.value.trim());
           }}
         />
         <button
