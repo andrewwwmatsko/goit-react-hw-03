@@ -23,16 +23,21 @@ export default function ContactForm({ onAdd }) {
     action.resetForm();
   };
 
-  const FeedbackSchema = Yup.object().shape({
-    name: Yup.string("Must be a string!")
-      .min(3, "Too short!")
-      .max(50, "Too long!")
-      .required("Required"),
-    number: Yup.string()
-      .min(3, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Required"),
-  });
+  const FeedbackSchema = Yup.object().shape(
+    {
+      name: Yup.string("Must be a string!")
+        .min(3, "Too short!")
+        .max(50, "Too long!")
+        .required("Required")
+        .trim(),
+      number: Yup.string()
+        .min(3, "Too Short!")
+        .max(50, "Too Long!")
+        .required("Required")
+        .trim(),
+    },
+    { strict: true }
+  );
 
   return (
     <Formik
