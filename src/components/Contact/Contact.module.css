@@ -19,7 +19,7 @@
   background-color: rgb(159, 156, 156);
   padding: 6px 10px;
   transition: color 250ms ease-in-out, transform 250ms ease-in-out;
-  font-size: 22px;
+  font-size: 18px;
 }
 .button:hover {
   color: rgb(238, 238, 238);

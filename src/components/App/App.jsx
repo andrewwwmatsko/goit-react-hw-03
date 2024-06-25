@@ -19,10 +19,14 @@ export default function App() {
     return contact.name.toLowerCase().includes(filter.toLowerCase());
   });
 
+  const addContact = (newContact) => {
+    setContacts([...contacts, newContact]);
+  };
+
   return (
     <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onSearch={setFilter} />
       <ContactList data={filteredContacts} />
     </div>
