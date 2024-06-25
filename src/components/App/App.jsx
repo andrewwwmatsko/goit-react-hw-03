@@ -13,12 +13,18 @@ export default function App() {
     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
   ]);
 
+  const [filter, setFilter] = useState("");
+
+  const filteredContacts = contacts.filter((contact) => {
+    return contact.name.toLowerCase().includes(filter.toLowerCase());
+  });
+
   return (
     <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
-      <SearchBox />
-      <ContactList data={contacts} />
+      <SearchBox value={filter} onSearch={setFilter} />
+      <ContactList data={filteredContacts} />
     </div>
   );
 }
