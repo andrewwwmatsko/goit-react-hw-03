@@ -10,6 +10,26 @@
   font-weight: bold;
 }
 .search {
-  padding: 2px 16px;
+  width: 300px;
+  padding: 2px 20px 2px 8px;
   font-size: 18px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.closeBtn {
+  border: none;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+.closeBtn:hover svg {
+  fill: black;
 }
