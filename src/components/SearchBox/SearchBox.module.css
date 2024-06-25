@@ -4,8 +4,10 @@
   max-width: 300px;
   margin-bottom: 25px;
 }
-label {
+
+.container label {
   font-size: 18px;
+  font-weight: bold;
 }
 .search {
   padding: 2px 16px;
