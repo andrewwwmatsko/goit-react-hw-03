@@ -7,9 +7,8 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 export default function SearchBox({ value, onSearch }) {
   const id = useId();
 
-  const handleClearInput = (evt) => {
-    const clearedValue = (evt.currentTarget.previousElementSibling.value = "");
-    onSearch(clearedValue);
+  const handleClearInput = () => {
+    onSearch("");
   };
 
   return (
@@ -22,7 +21,7 @@ export default function SearchBox({ value, onSearch }) {
           type="text"
           value={value}
           onChange={(evt) => {
-            onSearch(evt.target.value.trim());
+            onSearch(evt.target.value);
           }}
         />
         <button
